@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import App from './container/App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Form from './components/form';
+import App from './container/App';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route exact path="/create/new" component={Form} />
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
