@@ -2,19 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Form from './components/form';
-import App from './container/App';
+import Index from './container/Index';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route exact path="/create/new" component={Form} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<Index />} />
+        <Route path="/create/new" element={<Form />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
