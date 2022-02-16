@@ -6,10 +6,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Form from './components/form';
 import Index from './container/Index';
+import Header from './components/header';
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <Header />
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Index />} />

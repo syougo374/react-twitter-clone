@@ -1,7 +1,7 @@
 import '../css/App.css';
 // import Form from '../components/form';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap'
+
 
 function Index() {
   return (
@@ -20,7 +20,6 @@ function Index() {
           </tr>
         </tbody>
       </table>
-      <Button variant="outline-light">Light</Button>{' '}
       <Link to="/create/new">create_new</Link>
     </div>
   );
